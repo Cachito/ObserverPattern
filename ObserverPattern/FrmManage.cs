@@ -7,7 +7,7 @@ namespace ObserverPattern
 {
     public partial class FrmManage : Form
     {
-        EstacionMeteorologica estacion;
+        private WeatherStation station;
         private static Random rnd;
 
         public FrmManage()
@@ -18,7 +18,9 @@ namespace ObserverPattern
 
         private void BtnObservable_Click(object sender, EventArgs e)
         {
-            estacion = new EstacionMeteorologica();
+            station = new WeatherStation();
+            BtnObservable.Enabled = false;
+            BtnObservador.Enabled = true;
         }
 
         private void BtnObservador_Click(object sender, EventArgs e)
@@ -43,20 +45,20 @@ namespace ObserverPattern
 
         private void CreatePc()
         {
-            var pd = new PcDisplay(estacion);
-            estacion.Add(pd);
+            var pcDisplay = new PcDisplay(station);
+            station.Add(pcDisplay);
         }
 
         private void CreateFile()
         {
-            var fd = new FileDisplay(estacion);
-            estacion.Add(fd);
+            var fileDisplay = new FileDisplay(station);
+            station.Add(fileDisplay);
         }
 
         private void CreatePhone()
         {
-            var pd = new PhoneDisplay(estacion);
-            estacion.Add(pd);
+            var phoneDisplay = new PhoneDisplay(station);
+            station.Add(phoneDisplay);
         }
 
         private void BtnFin_Click(object sender, EventArgs e)

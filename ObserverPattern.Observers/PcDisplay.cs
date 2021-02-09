@@ -7,21 +7,26 @@ namespace ObserverPattern.Observers
 {
     public class PcDisplay : IObserver, IDisplay
     {
-        EstacionMeteorologica estacion;
-        readonly FrmObserver frm = new FrmObserver();
+        WeatherStation station;
+        private readonly FrmObserver frm;
 
-        public string Temperatura { get; private set; }
+        public string Temperature { get; private set; }
 
-        public PcDisplay(EstacionMeteorologica estacion)
+        public PcDisplay(WeatherStation station)
         {
-            this.estacion = estacion;
-            frm.Text = "PC Display";
+            this.station = station;
+
+            frm = new FrmObserver
+            {
+                Text = "PC Display"
+            };
+
             frm.Show();
         }
 
         public void Update()
         {
-            Temperatura = estacion.GetTemperatura();
+            Temperature = station.GetTemperature();
             Display();
         }
 
@@ -29,7 +34,7 @@ namespace ObserverPattern.Observers
         {
             frm.TextBackColor = Color.Pink;
             frm.TextForeColor = Color.Blue;
-            frm.DisplayValue = Temperatura;
+            frm.DisplayValue = Temperature;
         }
     }
 }

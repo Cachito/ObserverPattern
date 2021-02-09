@@ -5,18 +5,22 @@ using System.Collections.Generic;
 
 namespace ObserverPattern.Observable
 {
-    public class EstacionMeteorologica : IObservable
-    {        
-        FrmObservable frm = new FrmObservable();
+    public class WeatherStation : IObservable
+    {
+        readonly FrmObservable frm;
 
         List<IObserver> observers = new List<IObserver>();
         
-        private string temperatura = string.Empty;
+        private string temperature = string.Empty;
 
-        public EstacionMeteorologica()
+        public WeatherStation()
         {
-            frm.Estado = "Observable Iniciado";
-            frm.Estacion = this;
+            frm = new FrmObservable
+            {
+                State = "Observable Iniciado",
+                Station = this
+            };
+
             frm.Show();
         }
 
@@ -39,14 +43,14 @@ namespace ObserverPattern.Observable
             }
         }
 
-        public string GetTemperatura()
+        public string GetTemperature()
         {
-            return temperatura;
+            return temperature;
         }
 
-        public void SetTemperatura()
+        public void SetTemperature()
         {
-            temperatura = new Random().Next(-301, 301).ToString();
+            temperature = new Random().Next(-301, 301).ToString();
             Notify();
         }
     }

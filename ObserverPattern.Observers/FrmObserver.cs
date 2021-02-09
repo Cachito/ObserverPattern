@@ -5,11 +5,16 @@ namespace ObserverPattern.Observers
 {
     public partial class FrmObserver : Form
     {
+        public FrmObserver()
+        {
+            InitializeComponent();
+        }
+
         public string DisplayValue
         {
             set
             {
-                TxtEstado.Text = $"Temperatura {value}º";
+                TxtState.Text = $"Temperature {value}º";
             }
         }
 
@@ -17,7 +22,7 @@ namespace ObserverPattern.Observers
         {
             set
             {
-                TxtEstado.BackColor = value;
+                TxtState.BackColor = value;
             }
         }
 
@@ -25,13 +30,8 @@ namespace ObserverPattern.Observers
         {
             set
             {
-                TxtEstado.ForeColor = value;
+                TxtState.ForeColor = value;
             }
-        }
-
-        public FrmObserver()
-        {
-            InitializeComponent();
         }
     }
 }

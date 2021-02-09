@@ -7,21 +7,26 @@ namespace ObserverPattern.Observers
 {
     public class PhoneDisplay : IObserver, IDisplay
     {
-        EstacionMeteorologica estacion;
-        readonly FrmObserver frm = new FrmObserver();
+        WeatherStation station;
+        readonly FrmObserver frm;
 
         public string Temperatura { get; private set; }
 
-        public PhoneDisplay(EstacionMeteorologica estacion)
+        public PhoneDisplay(WeatherStation station)
         {
-            this.estacion = estacion;
-            frm.Text = "Phone Display";
+            this.station = station;
+
+            frm = new FrmObserver
+            {
+                Text = "Phone Display"
+            };
+
             frm.Show();
         }
 
         public void Update()
         {
-            Temperatura = estacion.GetTemperatura();
+            Temperatura = station.GetTemperature();
             Display();
         }
 

@@ -29,20 +29,20 @@ namespace ObserverPattern.Observable
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtEstado = new System.Windows.Forms.TextBox();
+            this.TxtState = new System.Windows.Forms.TextBox();
             this.txtObserversCount = new System.Windows.Forms.TextBox();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TxtEstado
+            // TxtState
             // 
-            this.TxtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEstado.Location = new System.Drawing.Point(58, 37);
-            this.TxtEstado.Name = "TxtEstado";
-            this.TxtEstado.ReadOnly = true;
-            this.TxtEstado.Size = new System.Drawing.Size(267, 26);
-            this.TxtEstado.TabIndex = 0;
-            this.TxtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtState.Location = new System.Drawing.Point(58, 37);
+            this.TxtState.Name = "TxtState";
+            this.TxtState.ReadOnly = true;
+            this.TxtState.Size = new System.Drawing.Size(267, 26);
+            this.TxtState.TabIndex = 0;
+            this.TxtState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtObserversCount
             // 
@@ -72,7 +72,7 @@ namespace ObserverPattern.Observable
             this.ControlBox = false;
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.txtObserversCount);
-            this.Controls.Add(this.TxtEstado);
+            this.Controls.Add(this.TxtState);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmObservable";
@@ -84,7 +84,7 @@ namespace ObserverPattern.Observable
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtEstado;
+        private System.Windows.Forms.TextBox TxtState;
         private System.Windows.Forms.TextBox txtObserversCount;
         private System.Windows.Forms.Button BtnUpdate;
     }
