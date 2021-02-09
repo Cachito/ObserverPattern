@@ -10,7 +10,7 @@ namespace ObserverPattern.Observers
         WeatherStation station;
         readonly FrmObserver frm;
 
-        public string Temperatura { get; private set; }
+        public string Temperature { get; private set; }
 
         public PhoneDisplay(WeatherStation station)
         {
@@ -18,6 +18,8 @@ namespace ObserverPattern.Observers
 
             frm = new FrmObserver
             {
+                Observer = this,
+                DisplayType = "Phone Display",
                 Text = "Phone Display"
             };
 
@@ -26,7 +28,7 @@ namespace ObserverPattern.Observers
 
         public void Update()
         {
-            Temperatura = station.GetTemperature();
+            Temperature = station.GetTemperature();
             Display();
         }
 
@@ -34,7 +36,12 @@ namespace ObserverPattern.Observers
         {
             frm.TextBackColor = Color.Red;
             frm.TextForeColor = Color.White;
-            frm.DisplayValue = Temperatura;
+            frm.DisplayValue = $"{Temperature} °C";
+        }
+
+        public void Detach()
+        {
+            station.Remove(this);
         }
     }
 }

@@ -32,14 +32,12 @@ namespace ObserverPattern
             this.BtnObservable = new System.Windows.Forms.Button();
             this.BtnObservador = new System.Windows.Forms.Button();
             this.BtnFin = new System.Windows.Forms.Button();
-            this.TxtObservable = new System.Windows.Forms.TextBox();
-            this.TxtObservers = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BtnObservable
             // 
             this.BtnObservable.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnObservable.Location = new System.Drawing.Point(12, 224);
+            this.BtnObservable.Location = new System.Drawing.Point(12, 42);
             this.BtnObservable.Name = "BtnObservable";
             this.BtnObservable.Size = new System.Drawing.Size(122, 60);
             this.BtnObservable.TabIndex = 0;
@@ -51,7 +49,7 @@ namespace ObserverPattern
             // 
             this.BtnObservador.Enabled = false;
             this.BtnObservador.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnObservador.Location = new System.Drawing.Point(156, 224);
+            this.BtnObservador.Location = new System.Drawing.Point(156, 42);
             this.BtnObservador.Name = "BtnObservador";
             this.BtnObservador.Size = new System.Drawing.Size(122, 60);
             this.BtnObservador.TabIndex = 1;
@@ -62,7 +60,7 @@ namespace ObserverPattern
             // BtnFin
             // 
             this.BtnFin.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnFin.Location = new System.Drawing.Point(296, 224);
+            this.BtnFin.Location = new System.Drawing.Point(296, 42);
             this.BtnFin.Name = "BtnFin";
             this.BtnFin.Size = new System.Drawing.Size(122, 60);
             this.BtnFin.TabIndex = 2;
@@ -70,32 +68,12 @@ namespace ObserverPattern
             this.BtnFin.UseVisualStyleBackColor = true;
             this.BtnFin.Click += new System.EventHandler(this.BtnFin_Click);
             // 
-            // TxtObservable
-            // 
-            this.TxtObservable.Location = new System.Drawing.Point(12, 12);
-            this.TxtObservable.Multiline = true;
-            this.TxtObservable.Name = "TxtObservable";
-            this.TxtObservable.ReadOnly = true;
-            this.TxtObservable.Size = new System.Drawing.Size(187, 187);
-            this.TxtObservable.TabIndex = 3;
-            // 
-            // TxtObservers
-            // 
-            this.TxtObservers.Location = new System.Drawing.Point(216, 12);
-            this.TxtObservers.Multiline = true;
-            this.TxtObservers.Name = "TxtObservers";
-            this.TxtObservers.ReadOnly = true;
-            this.TxtObservers.Size = new System.Drawing.Size(202, 187);
-            this.TxtObservers.TabIndex = 4;
-            // 
             // FrmManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 296);
+            this.ClientSize = new System.Drawing.Size(430, 151);
             this.ControlBox = false;
-            this.Controls.Add(this.TxtObservers);
-            this.Controls.Add(this.TxtObservable);
             this.Controls.Add(this.BtnFin);
             this.Controls.Add(this.BtnObservador);
             this.Controls.Add(this.BtnObservable);
@@ -104,7 +82,6 @@ namespace ObserverPattern
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -113,7 +90,5 @@ namespace ObserverPattern
         private System.Windows.Forms.Button BtnObservable;
         private System.Windows.Forms.Button BtnObservador;
         private System.Windows.Forms.Button BtnFin;
-        private System.Windows.Forms.TextBox TxtObservable;
-        private System.Windows.Forms.TextBox TxtObservers;
     }
 }
