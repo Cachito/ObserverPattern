@@ -4,13 +4,13 @@ namespace ObserverPattern.Observable
 {
     public partial class FrmObservable : Form
     {
-        public EstacionMeteorologica Estacion{ set; get; }
+        public WeatherStation Station{ set; get; }
 
-        public string Estado
+        public string State
         {
             set
             {
-                TxtEstado.Text = value;
+                TxtState.Text = value;
             }
         }
 
@@ -29,7 +29,7 @@ namespace ObserverPattern.Observable
 
         private void BtnUpdate_Click(object sender, System.EventArgs e)
         {
-            Estacion.SetTemperatura();
+            Station.SetTemperature();
         }
     }
 }

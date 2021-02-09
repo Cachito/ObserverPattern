@@ -49,6 +49,7 @@ namespace ObserverPattern
             // 
             // BtnObservador
             // 
+            this.BtnObservador.Enabled = false;
             this.BtnObservador.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObservador.Location = new System.Drawing.Point(156, 224);
             this.BtnObservador.Name = "BtnObservador";

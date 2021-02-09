@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EstacionMeteorologica.cs" />
+    <Compile Include="WeatherStation.cs" />
     <Compile Include="FrmObservable.cs">
       <SubType>Form</SubType>
     </Compile>

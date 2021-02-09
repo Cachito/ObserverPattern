@@ -29,18 +29,18 @@ namespace ObserverPattern.Observers
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtEstado = new System.Windows.Forms.TextBox();
+            this.TxtState = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // TxtEstado
+            // TxtState
             // 
-            this.TxtEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEstado.Location = new System.Drawing.Point(9, 17);
-            this.TxtEstado.Name = "TxtEstado";
-            this.TxtEstado.ReadOnly = true;
-            this.TxtEstado.Size = new System.Drawing.Size(267, 26);
-            this.TxtEstado.TabIndex = 1;
-            this.TxtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtState.Location = new System.Drawing.Point(9, 17);
+            this.TxtState.Name = "TxtState";
+            this.TxtState.ReadOnly = true;
+            this.TxtState.Size = new System.Drawing.Size(267, 26);
+            this.TxtState.TabIndex = 1;
+            this.TxtState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmObserver
             // 
@@ -48,7 +48,7 @@ namespace ObserverPattern.Observers
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 61);
             this.ControlBox = false;
-            this.Controls.Add(this.TxtEstado);
+            this.Controls.Add(this.TxtState);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmObserver";
             this.Text = "FrmObserver";
@@ -59,6 +59,6 @@ namespace ObserverPattern.Observers
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtEstado;
+        private System.Windows.Forms.TextBox TxtState;
     }
 }

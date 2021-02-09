@@ -7,21 +7,26 @@ namespace ObserverPattern.Observers
 {
     public class FileDisplay : IObserver, IDisplay
     {
-        EstacionMeteorologica estacion;
-        readonly FrmObserver frm = new FrmObserver();
+        WeatherStation station;
+        private readonly FrmObserver frm;
 
-        public string Temperatura { get; private set; }
+        public string Temperature { get; private set; }
 
-        public FileDisplay(EstacionMeteorologica estacion)
+        public FileDisplay(WeatherStation station)
         {
-            this.estacion = estacion;
-            frm.Text = "File Display";
+            this.station = station;
+
+            frm = new FrmObserver
+            {
+                Text = "File Display"
+            };
+
             frm.Show();
         }
 
         public void Update()
         {
-            Temperatura = estacion.GetTemperatura();
+            Temperature = station.GetTemperature();
             Display();
         }
 
@@ -29,7 +34,7 @@ namespace ObserverPattern.Observers
         {
             frm.TextBackColor = Color.Black;
             frm.TextForeColor = Color.White;
-            frm.DisplayValue = Temperatura;
+            frm.DisplayValue = Temperature;
         }
     }
 }
