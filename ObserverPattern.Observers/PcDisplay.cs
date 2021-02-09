@@ -18,6 +18,8 @@ namespace ObserverPattern.Observers
 
             frm = new FrmObserver
             {
+                Observer = this,
+                DisplayType = "PC Display",
                 Text = "PC Display"
             };
 
@@ -34,7 +36,12 @@ namespace ObserverPattern.Observers
         {
             frm.TextBackColor = Color.Pink;
             frm.TextForeColor = Color.Blue;
-            frm.DisplayValue = Temperature;
+            frm.DisplayValue = $"{Temperature} °C";
+        }
+
+        public void Detach()
+        {
+            station.Remove(this);
         }
     }
 }

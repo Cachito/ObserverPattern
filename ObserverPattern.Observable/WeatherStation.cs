@@ -32,7 +32,12 @@ namespace ObserverPattern.Observable
 
         public void Remove(IObserver observer)
         {
-            observers.Remove(observer);
+            if (observers.Contains(observer))
+            {
+                observers.Remove(observer);
+            }
+
+            frm.ObserversCount = observers.Count;
         }
 
         public void Notify()

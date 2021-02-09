@@ -56,9 +56,10 @@ namespace ObserverPattern.Observable
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(127, 126);
+            this.BtnUpdate.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdate.Location = new System.Drawing.Point(92, 138);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(131, 23);
+            this.BtnUpdate.Size = new System.Drawing.Size(200, 40);
             this.BtnUpdate.TabIndex = 2;
             this.BtnUpdate.Text = "Update Temperatura";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -68,7 +69,7 @@ namespace ObserverPattern.Observable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 161);
+            this.ClientSize = new System.Drawing.Size(384, 185);
             this.ControlBox = false;
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.txtObserversCount);
