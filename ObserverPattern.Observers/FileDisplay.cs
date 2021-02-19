@@ -1,18 +1,21 @@
-﻿using ObserverPattern.DisplayInterface;
-using ObserverPattern.Observable;
+﻿using ObserverPattern.Observable;
 using ObserverPattern.ObserverInterface;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 
 namespace ObserverPattern.Observers
 {
-    public class FileDisplay : IObserver, IDisplay
+    public class FileDisplay : IObserver
     {
         WeatherStation station;
         private readonly FrmObserver frm;
         private readonly string fileName;
         private readonly string fileFullPath;
+        private string temperature = string.Empty;
+        List<IObserver> observers = new List<IObserver>();
+
 
         public string Temperature { get; private set; }
 
@@ -35,7 +38,8 @@ namespace ObserverPattern.Observers
 
         public void Update()
         {
-            Temperature = station.GetTemperature();
+            SetTemperature();
+            Temperature = GetTemperature(temperature);
             SaveData();
             Display();
         }
@@ -58,6 +62,26 @@ namespace ObserverPattern.Observers
         public void Detach()
         {
             station.Remove(this);
+        }
+
+        public string GetTemperature(string temperature)
+        {
+            SetTemperature();
+            return temperature;
+        }
+
+        public void SetTemperature()
+        {
+            temperature = new Random().Next(-301, 301).ToString();
+            Notify();
+        }
+
+        public void Notify()
+        {
+            foreach (IObserver o in observers)
+            {
+                o.Update();
+            }
         }
     }
 }
