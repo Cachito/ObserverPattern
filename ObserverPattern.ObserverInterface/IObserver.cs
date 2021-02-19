@@ -1,8 +1,8 @@
 ﻿namespace ObserverPattern.ObserverInterface
 {
     public interface IObserver
-    {
-        void Update();
+    {       
+        void Update(string tmp);
         void Detach();
     }
 }
