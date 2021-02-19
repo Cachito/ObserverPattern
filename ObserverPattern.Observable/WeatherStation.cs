@@ -48,11 +48,6 @@ namespace ObserverPattern.Observable
             }
         }
 
-        public string GetTemperature()
-        {
-            return temperature;
-        }
-
         public void SetTemperature()
         {
             temperature = new Random().Next(-301, 301).ToString();
