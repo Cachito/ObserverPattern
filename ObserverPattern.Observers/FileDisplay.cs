@@ -33,13 +33,6 @@ namespace ObserverPattern.Observers
             frm.Show();
         }
 
-        public void Update()
-        {
-            Temperature = station.GetTemperature();
-            SaveData();
-            Display();
-        }
-
         private void SaveData()
         {
             using (StreamWriter sw = File.AppendText(fileFullPath))
@@ -58,6 +51,13 @@ namespace ObserverPattern.Observers
         public void Detach()
         {
             station.Remove(this);
+        }
+
+        public void Update(string tmp)
+        {
+            this.Temperature = tmp;
+            SaveData();
+            Display();
         }
     }
 }

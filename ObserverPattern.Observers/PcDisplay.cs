@@ -26,12 +26,7 @@ namespace ObserverPattern.Observers
             frm.Show();
         }
 
-        public void Update()
-        {
-            Temperature = station.GetTemperature();
-            Display();
-        }
-
+        
         public void Display()
         {
             frm.TextBackColor = Color.Pink;
@@ -42,6 +37,12 @@ namespace ObserverPattern.Observers
         public void Detach()
         {
             station.Remove(this);
+        }
+
+        public void Update(string tmp)
+        {
+            Temperature = tmp;
+            Display();
         }
     }
 }

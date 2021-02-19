@@ -44,7 +44,7 @@ namespace ObserverPattern.Observable
         {
             foreach (IObserver o in observers)
             {
-                o.Update();
+                o.Update(temperature);
             }
         }
 
