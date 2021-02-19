@@ -14,8 +14,7 @@ namespace ObserverPattern.Observers
         private readonly string fileName;
         private readonly string fileFullPath;
 
-        public string Temperature { get; private set; }
-
+        private string temperature;
         public FileDisplay(WeatherStation station)
         {
             this.station = station;
@@ -33,9 +32,9 @@ namespace ObserverPattern.Observers
             frm.Show();
         }
 
-        public void Update()
+        public void Update(string temperature)
         {
-            Temperature = station.GetTemperature();
+            this.temperature = temperature;
             SaveData();
             Display();
         }
@@ -44,7 +43,7 @@ namespace ObserverPattern.Observers
         {
             using (StreamWriter sw = File.AppendText(fileFullPath))
             {
-                sw.WriteLine($"{DateTime.Now:dd/MM/yyyy HH:mm:ss} -> {Temperature} °C.");
+                sw.WriteLine($"{DateTime.Now:dd/MM/yyyy HH:mm:ss} -> {temperature} °C.");
             }
         }
 
@@ -52,7 +51,7 @@ namespace ObserverPattern.Observers
         {
             frm.TextBackColor = Color.Black;
             frm.TextForeColor = Color.White;
-            frm.DisplayValue = $"actualizado: {Temperature} °C";
+            frm.DisplayValue = $"actualizado: {temperature} °C";
         }
 
         public void Detach()

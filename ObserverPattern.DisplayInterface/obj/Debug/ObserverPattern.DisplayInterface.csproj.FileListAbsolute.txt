@@ -1,0 +1,6 @@
+C:\Users\Giorno\Desktop\ObserverPattern-main\ObserverPattern.DisplayInterface\bin\Debug\ObserverPattern.DisplayInterface.dll
+C:\Users\Giorno\Desktop\ObserverPattern-main\ObserverPattern.DisplayInterface\bin\Debug\ObserverPattern.DisplayInterface.pdb
+C:\Users\Giorno\Desktop\ObserverPattern-main\ObserverPattern.DisplayInterface\obj\Debug\ObserverPattern.DisplayInterface.csprojAssemblyReference.cache
+C:\Users\Giorno\Desktop\ObserverPattern-main\ObserverPattern.DisplayInterface\obj\Debug\ObserverPattern.DisplayInterface.csproj.CoreCompileInputs.cache
+C:\Users\Giorno\Desktop\ObserverPattern-main\ObserverPattern.DisplayInterface\obj\Debug\ObserverPattern.DisplayInterface.dll
+C:\Users\Giorno\Desktop\ObserverPattern-main\ObserverPattern.DisplayInterface\obj\Debug\ObserverPattern.DisplayInterface.pdb
